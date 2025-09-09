@@ -20,6 +20,7 @@ print(df.corr())
 print(sns.heatmap(df.corr(), cmap="coolwarm"))
 print(df['SPX'].plot())
 from sklearn.linear_model import LinearRegression
+#Looking into the regression of the data
 lr=LinearRegression()
 y = df['SPX']
 x = df[['GLD', 'SLV']]
@@ -28,5 +29,6 @@ predict = lr.predict(x)
 sns.lineplot(data=df,y='SPX',x=df.index)
 sns.lineplot(y=predict,x=df.index)
 from sklearn.metrics import mean_absolute_error,mean_absolute_percentage_error
+#Final Output
 print(mean_absolute_error(y,predict))
 print(mean_absolute_percentage_error(y,predict))
