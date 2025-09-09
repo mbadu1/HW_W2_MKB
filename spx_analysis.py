@@ -15,6 +15,7 @@ print(df.groupby(df['Date'].dt.year)[['SPX','GLD']].mean())
 print(df.groupby(df['Date'].dt.year)[['SPX','GLD']].count())
 df = df.set_index('Date')
 print(df.head())
+#read the header of the row
 print(df.corr())
 print(sns.heatmap(df.corr(), cmap="coolwarm"))
 print(df['SPX'].plot())
