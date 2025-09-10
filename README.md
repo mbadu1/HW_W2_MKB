@@ -40,6 +40,7 @@ The core goal is to evaluate whether the prices of GLD and SLV can help forecast
 - A line plot of actual vs. predicted SPX confirms that predictions follow the **general trend**, but not the exact magnitude of daily changes.  
 ![alt text](image-1.png)
 ![alt text](image-2.png)
+![alt text](image-3.png)
 ---
 
 ## 🚀 Next Steps
