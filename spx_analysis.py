@@ -4,12 +4,16 @@ import matplotlib.pyplot as plt
 
 #Read csv file downloaded from kaggle
 df = pd.read_csv('gold_data_2015_25.csv')
+# Display first few rows to understand the data structure
 print(df.head())
+# Display info about column types and non-null counts
 print(df.info())
+# Display descriptive statistics for numeric columns
 print(df.describe())
-#Change date to actual datetime type
+# Convert the 'Date' column to datetime format
 df['Date'] = pd.to_datetime(df['Date'])
 print(df.info())
+# Set 'Date' column as the index for time series analysis
 print(df.loc[df['Date'].dt.year == 2025])
 print(df.groupby(df['Date'].dt.year)[['SPX','GLD']].mean())
 print(df.groupby(df['Date'].dt.year)[['SPX','GLD']].count())
